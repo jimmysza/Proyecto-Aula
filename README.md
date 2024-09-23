@@ -9,5 +9,7 @@ Jair Payares
 Alejandro Leemow   
 Esteban Carreazo   
 
+cd "C:\Users\jaime_lbf9co7\OneDrive\Documentos\3th Semester\PROYECTO AULA"
+
 
 

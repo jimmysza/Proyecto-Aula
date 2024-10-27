@@ -305,7 +305,6 @@ h1 {
 }
 
 .container-link:nth-child(2) {
-    width: 34%;
     border-left: 1px solid black;
     border-right: 1px solid black;
 }

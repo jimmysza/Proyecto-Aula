@@ -41,8 +41,9 @@ public class PersonalController {
         switch (option) {
             case 1 -> capacitacioAprendizaje();
             case 2 -> servicio_personal();
-            case 3 -> System.exit(0);
-            default -> JOptionPane.showMessageDialog(null, "La Contraseña es incorrecta...");
+            case 3 -> { JOptionPane.showMessageDialog(null, "Muchas Gracias, VUELVA PRONTO");
+            return;
+        } default -> JOptionPane.showMessageDialog(null, "La Contraseña es incorrecta...");
         }
     }
 

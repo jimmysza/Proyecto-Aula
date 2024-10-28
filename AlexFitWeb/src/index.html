@@ -12,21 +12,42 @@
 </head>
 
 <body>
-  
-  <header class=" section__container header">
+
+  <header class="section__container header">
+
+
     <div class="nav__bar">
       <input class="header__checkbox" type="checkbox" id="open-menu">
       <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+
+
       <a href="#" class=" logo-title">Alex Fit</a>
       <a class="home-link"></a>
-      <a href="#" class="link-nav">Reservar</a>
+      <!--DROPDOWN-->
+      <div class=" link-nav containt-reservacion" onclick="mostrarDropDown()">
+        <div class="nav__link">
+          <a href="#" class="drop-link">Reservar</a>
+          <i class='bx bx-chevron-down dropdown__arrow'></i>
+        </div>
+
+        <ul class="dropdown__menu">
+          <li class="dropdown-li">
+            <i class='icon-link-nav bx bxs-map-pin '></i>
+            <a href="#" class="link-nav">Ir a Recoger</a>
+          </li>
+          <li class="dropdown-li">
+            <i class='icon-link-nav bx bx-trip '></i>
+            <a href="#" class="link-nav drop-link">Domicilios</a>
+          </li>
+        </ul>
+      </div>
       <a href="#" class="link-nav">Menu</a>
       <a href="#" class="link-nav">Domicilios</a>
 
       <nav class="header-nav">
         <ul class="header-ul">
 
-          <div class="container-header__ul">
+          <li class="container-header__ul">
             <div class="center container-link-ul">
               <img src="../assets/icons/icons8-scooter-de-entrega-90.png" class=" icon-ul">
               <a class=" title-links-ul ">Recoger en Alex Fit</a>
@@ -42,9 +63,7 @@
               <a class=" title-links-ul ">Menu</a>
               <a href="" class="btn-ul">Menu del Restaurante</a>
             </div>
-          </div>
 
-          <div class="container-header__ul">
             <div class="center container-link-ul">
               <img src="../assets/icons/icons8-calendario-100.png" class=" icon-ul">
               <a class=" title-links-ul ">RESERVAR MESA</a>
@@ -60,7 +79,7 @@
               <a class=" title-links-ul ">Ubicacion</a>
               <a href="" class="  btn-ul">Contactanos por wpp</a>
             </div>
-          </div>
+          </li>
         </ul>
       </nav>
   </header>
@@ -73,7 +92,8 @@
     </div>
   </section>
 
-  <a href="tel:*573002229196" download"><img src="../assets/icons/whatsapp.svg" alt="ingresa a wpp" class="icon-wpp"></a>
+  <a href="tel:*573002229196" download"><img src="../assets/icons/whatsapp.svg" alt="ingresa a wpp"
+      class="icon-wpp"></a>
 
   <section class="section__container  about-us">
     <div class=" center container-about">
@@ -150,23 +170,23 @@
   <section class="section__container blogs">
     <h2>Blogs</h2>
     <div class="container-blogs-1">
-        <div class="card-model card-blogs-1">
-          <p class="blog-title">Comida Gourmet es Saludable</p>
-        </div>
+      <div class="card-model card-blogs-1">
+        <p class="blog-title">Comida Gourmet es Saludable</p>
+      </div>
 
-        <div class="card-blogs-2 card-model">
-          <p class="blog-title">La Musica</p>
-        </div>
+      <div class="card-blogs-2 card-model">
+        <p class="blog-title">La Musica</p>
+      </div>
     </div>
     <div class="container-blogs-1">
-      <div class="card-model card-blogs-3"> 
+      <div class="card-model card-blogs-3">
         <p class="blog-title">La Importancia de los jugos verdes</p>
       </div>
-          
-      <div class="card-model card-blogs-4"> 
+
+      <div class="card-model card-blogs-4">
         <p class="blog-title">Verduras o Frutas</p>
       </div>
-      
+
     </div>
   </section>
 
@@ -175,12 +195,14 @@
       <h3 class="text-3xl mb-4">Why FitBurger?</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
         <div class="flex flex-col items-center">
-          <img src="../assets/icons/MaterialSymbolsNestEcoLeafOutline.svg" class="w-12 h-12 text-green-600 mb-4" alt="Fresh Ingredients" />
+          <img src="../assets/icons/MaterialSymbolsNestEcoLeafOutline.svg" class="w-12 h-12 text-green-600 mb-4"
+            alt="Fresh Ingredients" />
           <h4 class="font-bold mb-2">Fresh Ingredients</h4>
           <p class="text-sm">We use only the freshest, locally-sourced ingredients.</p>
         </div>
         <div class="flex flex-col items-center">
-          <img src="../assets/icons/MaterialSymbolsFlatware.svg" class="w-12 h-12 text-orange-600 mb-4" alt="Gourmet Taste" />
+          <img src="../assets/icons/MaterialSymbolsFlatware.svg" class="w-12 h-12 text-orange-600 mb-4"
+            alt="Gourmet Taste" />
           <h4 class="font-bold mb-2">Gourmet Taste</h4>
           <p class="text-sm">Our chefs create unique, mouth-watering flavor combinations.</p>
         </div>
@@ -192,10 +214,10 @@
       </div>
     </div>
   </section>
-  
+
 
   <footer class="section__container footer">
-    
+
     <div class="seccion-1">
       <p>Alex</p>
       <p class="h2">Fit</p>
@@ -209,14 +231,15 @@
     </div>
     <div class="seccion-1">
       <div class="social-media">
-        <a href="">Edificio Los Delfines, Cra. 2 #8-67 Apto 14-04, Cartagena de Indias, Provincia de Cartagena, Bolívar</a>
+        <a href="">Edificio Los Delfines, Cra. 2 #8-67 Apto 14-04, Cartagena de Indias, Provincia de Cartagena,
+          Bolívar</a>
         <img src="../assets/icons/icons8-marcador-96.png" alt="">
       </div>
       <div class="social-media">
         <a href="">+57 3052135329</a>
         <img src="../assets/icons/icons8-teléfono-100.png" alt="">
       </div>
-      
+
       <div class="social-media">
         <a href="">alexfitinfo@gmail.com</a>
         <img src="../assets/icons/icons8-mensaje-100.png" class="img-social">
@@ -227,7 +250,7 @@
   <div class="container-copy section__container">
     <p>@2024 J PEREZ COPYRIGHT</p>
   </div>
-  
+
 
 
   <link rel="stylesheet" href="script.js">

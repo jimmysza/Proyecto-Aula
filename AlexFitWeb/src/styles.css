@@ -24,7 +24,7 @@
     --box-shadow: 0px 14px 15px -3px rgba(0, 0, 0, 0.1), 0px -4px 15px -3px #ffefef;
 }
 
-
+/*====BASES===*/
 body {
     margin: 0;
     margin: 0;
@@ -54,6 +54,17 @@ label {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+
+/*====REUSABLE CODE===*/
+
 .flex-row {
     display: flex;
     align-items: center;
@@ -76,7 +87,7 @@ label {
     font-weight: bold;
 }
 
-
+/*MAIN SECTION*/
 .Main-Container {
     width: 100%;
     height: 87vh;
@@ -106,18 +117,19 @@ h1 {
 }
 
 
-/**/
+/*HEADERE*/
 
 .header {
     background-color: var(--color-dark-red);
     position: sticky;
     top: 0;
     text-align: center;
-    padding: 10px 0px;
+    padding: 0px 0px;
     z-index: 999;
 }
 
 .header__open-nav-button {
+    display: none;
     color: #fafafa;
     font-weight: 700;
     font-size: 2.8rem;
@@ -144,6 +156,10 @@ h1 {
     z-index: 1000;
 }
 
+.header-nav::-webkit-scrollbar{
+    width: 0;
+}
+
 .header__checkbox:checked~.header-nav {
     display: flex;
     justify-content: center;
@@ -155,7 +171,7 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    gap: 0px;
     padding: 0px 40px;
     position: relative;
     z-index: 1000;
@@ -173,12 +189,93 @@ h1 {
 .link-nav {
     display: flex;
     align-items: center;
-    text-decoration: none;
     font-size: 16px;
     color: #fafafa;
     font-weight: 600;
-    padding: 0px 20px;
+    padding: 20px 30px;
+    transition: background-color .3s;
+    background-color: var(--color-dark-red);
 }
+
+.link-nav:hover{
+    background-color: #5c0a02;
+}
+
+.containt-reservacion{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nav__link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+.dropdown__menu{
+    transition: max-height .4 ease-out;
+    padding: 10px 5.7px;
+}
+
+.dropdown-li{
+    display: flex;
+    background-color: var(--color-dark-red);
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.icon-link-nav{
+    width: 20px;
+    height: 20px;
+    color: #d1cfcf;
+}
+
+
+.drop-link{
+    padding-right: 3px;
+    color: #fafafa;
+    width: 100%;
+}
+
+.dropdown__arrow {
+    color: #fafafa;
+    transition: transform .4s;
+}
+
+.dropdown-li .link-nav{
+    transition: none;
+}
+
+/*no work*/
+.dropdown-li:hover .dropdown__arrow{
+    transform: rotate(180deg);
+}
+
+
+
+.dropdown-li:hover{
+    background-color: #5c0a02;
+}
+
+
+.dropdown-li:hover .icon-link-nav,
+.dropdown-li:hover .link-nav {
+    background-color: #5c0a02;
+}
+
+
+.dropdown-li a {
+    padding-left: 10px;
+}
+
+
+
+
+
 
 .logo-title {
     position: absolute;
@@ -187,7 +284,6 @@ h1 {
     font-weight: 100;
     font-family: 'MiFuente';
     font-size: 35px;
-    text-decoration: none;
     color: #fafafa;
     padding: 0px 20px;
 }
@@ -207,7 +303,6 @@ h1 {
 .container-link-ul {
     flex-direction: column;
     text-align: center;
-    width: 20%;
     height: 100%;
     padding: 40px 0px;
     gap: 40px;
@@ -217,7 +312,9 @@ h1 {
 
 .container-header__ul {
     gap: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1f);
     flex-direction: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +332,6 @@ h1 {
 }
 
 .btn-ul {
-    text-decoration: none;
     padding: 10px 20px;
     border: unset;
     border-radius: 15px;
@@ -277,7 +373,6 @@ h1 {
 
 .container-about-2 .btn-read_more {
     z-index: 12;
-    text-decoration: none;
     color: #fff;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -298,7 +393,6 @@ h1 {
 .container-link {
     flex-direction: column;
     text-align: center;
-    width: 33%;
     height: 100%;
     padding: 40px 10px;
     gap: 40px;
@@ -320,7 +414,6 @@ h1 {
 
 /* From Uiverse.io by alexroumi */
 .btn-links {
-    text-decoration: none;
     padding: 15px 25px;
     border: unset;
     border-radius: 15px;
@@ -369,6 +462,7 @@ h1 {
     background-color: var(--color-dark-red);
     border-top: 5px solid #d1cfcf;
     margin: auto;
+    overflow: hidden;
 }
 
 
@@ -475,7 +569,6 @@ h2 {
 }
 
 .seccion-1 a {
-    text-decoration: none;
     color: #fafafa;
     font-size: 14px;
 }
@@ -648,11 +741,29 @@ h2 {
         height: 86vh;
     }
 
-    .Links
+    .Links {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
     .container-link {
-        width: 33%;
+        width: 100%;
         height: 100%;
         padding: 40px 10px;
         gap: 40px;
+    }
+
+    .container-link:nth-child(2){
+        border: none;
+    }
+
+    .container-header__ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1f);
+        overflow-y: auto
+    }
+
+    .header__open-nav-button{
+        display: flex;
     }
 }

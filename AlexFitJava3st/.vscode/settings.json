@@ -1,8 +1,0 @@
-{
-    "type": "java",
-    "name": "Launch Main",
-    "request": "launch",
-    "mainClass": "view.MainView",
-    "classpath": ["C:\\Users\\jaime_lbf9co7\\OneDrive\\Documentos\\3th Semester\\PROYECTO AULA\\AlexFitJava3st\\bin"]
-    
-}

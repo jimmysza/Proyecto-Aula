@@ -25,9 +25,13 @@ public class DashBoard extends javax.swing.JFrame {
     GerentePanel panelGerente = new GerentePanel();
     MainPanel panelMain = new MainPanel();
 
+    
     private final String barra = File.separator;
+    //ubicacion de la carpeta
     private final String ubicacion = System.getProperty("user.dir") + barra + "ListaUsuarios" + barra;
+    
     File contenedor = new File(ubicacion);
+    
     File[] registros = contenedor.listFiles();
 
     // importar los paneles, crear objecto, agregar al main, set main.add(panelGerente); panelMain.setVisible(false);
@@ -144,12 +148,12 @@ public class DashBoard extends javax.swing.JFrame {
     }
 
     public boolean iniciarSesion() {
+        
         String usuario = JOptionPane.showInputDialog(null, "Ingrese su Usuario: ");
         String contraseña = JOptionPane.showInputDialog(null, "Ingrese su Contraseña: ");
 
         modeloReservacion.setLastUsuario(usuario);
-        
-
+                
         File directorioUsuarios = new File(ubicacion);
 
         // Asegúrate de que la carpeta existe y contiene archivos
@@ -197,13 +201,13 @@ public class DashBoard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        BotonInicio = new javax.swing.JButton();
+        BotonClientes = new javax.swing.JButton();
+        BotonPersonal = new javax.swing.JButton();
+        BotonGerente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        BotonSalir = new javax.swing.JButton();
+        BotonCambiodeUsuario = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         main = new javax.swing.JLayeredPane();
 
@@ -213,53 +217,53 @@ public class DashBoard extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(150, 768));
         jPanel1.setPreferredSize(new java.awt.Dimension(150, 760));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("Inicio");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotonInicio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BotonInicio.setText("Inicio");
+        BotonInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotonInicioActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setText("Clientes");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BotonClientes.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BotonClientes.setText("Clientes");
+        BotonClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BotonClientesActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton3.setText("Personal");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BotonPersonal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BotonPersonal.setText("Personal");
+        BotonPersonal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BotonPersonalActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton4.setText("Gerente");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BotonGerente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BotonGerente.setText("Gerente");
+        BotonGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BotonGerenteActionPerformed(evt);
             }
         });
 
         jLabel1.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/img/alex fit.png"))); // NOI18N
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton5.setText("Salir");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        BotonSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BotonSalir.setText("Salir");
+        BotonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                BotonSalirActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton6.setText("Cambiar Usuario");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        BotonCambiodeUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BotonCambiodeUsuario.setText("Cambiar Usuario");
+        BotonCambiodeUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                BotonCambiodeUsuarioActionPerformed(evt);
             }
         });
 
@@ -275,12 +279,12 @@ public class DashBoard extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(11, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
+                    .addComponent(BotonInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BotonClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BotonPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BotonGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BotonSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BotonCambiodeUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
                 .addGap(13, 13, 13))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(51, 51, 51)
@@ -296,17 +300,17 @@ public class DashBoard extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addComponent(jLabel3)
                 .addGap(45, 45, 45)
-                .addComponent(jButton1)
+                .addComponent(BotonInicio)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BotonClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(BotonPersonal)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(BotonGerente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(BotonCambiodeUsuario)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(BotonSalir)
                 .addGap(27, 27, 27))
         );
 
@@ -322,7 +326,7 @@ public class DashBoard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BotonGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGerenteActionPerformed
         
         
         
@@ -346,9 +350,9 @@ public class DashBoard extends javax.swing.JFrame {
             
         }
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BotonGerenteActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BotonPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPersonalActionPerformed
         String contraseña = JOptionPane.showInputDialog(null, "Ingrese Contraseña para acceder al Menu del Personal");
 
         // Valida la contraseña ingresada
@@ -363,38 +367,38 @@ public class DashBoard extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BotonPersonalActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BotonClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonClientesActionPerformed
         panelCliente.setVisible(true);
         panelGerente.setVisible(false);
         panelPersonal.setVisible(false);
         panelMain.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BotonClientesActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
         panelMain.setVisible(true);
         panelCliente.setVisible(false);
         panelGerente.setVisible(false);
         panelPersonal.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotonInicioActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_BotonSalirActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void BotonCambiodeUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCambiodeUsuarioActionPerformed
         ingreso();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_BotonCambiodeUsuarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton BotonCambiodeUsuario;
+    private javax.swing.JButton BotonClientes;
+    private javax.swing.JButton BotonGerente;
+    private javax.swing.JButton BotonInicio;
+    private javax.swing.JButton BotonPersonal;
+    private javax.swing.JButton BotonSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;

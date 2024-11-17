@@ -20,8 +20,9 @@ public class DisponibilidadMesas extends javax.swing.JPanel {
     String ubicacion_contador = System.getProperty("user.dir") + barra + "ContadorMesas" + barra;
     File contenedor_contador = new File(ubicacion_contador);
     
-
+    //crea la columnas
     String[] titulo = {"ID", "Nombre", "Hora De Llegada", "Mesas A Ocupar", "Sillas Adicionales", "Cantidad De Personas"};
+    
     DefaultTableModel dtm = new DefaultTableModel(null, titulo);
 
     public DisponibilidadMesas() {
@@ -29,19 +30,21 @@ public class DisponibilidadMesas extends javax.swing.JPanel {
         RegTabla();
         registros = contenedor.listFiles();
     }
-
+    
+    
     public void ActualizarTabla() {
         registros = contenedor.listFiles();
         dtm.setRowCount(0); // Limpia el modelo de la tabla antes de actualizar
         RegTabla();
     }
-
+    
+    //crear una tabla
     private void RegTabla() {
         for (File registro : registros) {
             try (FileInputStream fis = new FileInputStream(registro)) {
                 Properties mostrar = new Properties();
                 mostrar.load(fis);
-
+                //poner informacion en la tabla
                 String[] fila = {
                     registro.getName(),
                     mostrar.getProperty("Nombre"),
@@ -57,7 +60,9 @@ public class DisponibilidadMesas extends javax.swing.JPanel {
         }
         jTable1.setModel(dtm);
     }
-
+    
+    
+    // eliminar una mesas 
     private void Eliminar() {
         int filaSeleccionada = jTable1.getSelectedRow();
         if (filaSeleccionada != -1) {

@@ -19,9 +19,10 @@ public class EvaluacionSastifaccion extends JPanel implements CrudInterfaces {
     String barra = File.separator;
     // Se pone la barra al final para poner despues el fichero
     String ubicacion = System.getProperty("user.dir") + barra + "Evaluaciones" + barra;
+    //crear numero aleatorio biblioteca
     Random random = new Random();
     
-private ReservacionesModel modeloReservacion = ReservacionesModel.getInstance();    
+    private ReservacionesModel modeloReservacion = ReservacionesModel.getInstance();    
     
     @Override
     public void crear(){

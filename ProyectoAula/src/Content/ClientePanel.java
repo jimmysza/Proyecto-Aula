@@ -18,12 +18,16 @@ public class ClientePanel extends javax.swing.JPanel {
             
     public ClientePanel() {
         initComponents();
+        
+        //mainCliente es un panel o jframe
+        //agregando paneles 
         mainCliente.add(PanelMain);
         mainCliente.add(PanelMenu);
         mainCliente.add(panelPqr);
         mainCliente.add(panelReservar);
         mainCliente.add(panelEvaluacion);
         
+        //los pone visibles y los ocultamos
         PanelMain.setVisible(true);
         PanelMenu.setVisible(false);
         panelReservar.setVisible(false);

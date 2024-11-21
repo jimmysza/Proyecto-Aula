@@ -21,89 +21,109 @@
 
 <body>
 
+
   <header>
     <nav class="center">
-      <input class="header__checkbox" type="checkbox" id="open-menu">
-      <label for="open-menu" class="header__open-nav-button" role="button">=</label>
-      <ul class="flex-row">
-
-
-        <div class="container-dropdown">
-          <div class="dropdown__item flex-row">
-            <li><a href="">
-                <h2>Reserva</h2>
-              </a></li>
-            <i class='bx bx-chevron-down dropdown__arrow'></i>
-          </div>
-
-          <ul class="dropdown__menu">
-            <li class="dropdown-link">
-              <i class='icon-link-nav bx bxs-map-pin'></i>
-              <h5><a href="#" class="link-nav">Ir a Recoger</a></h5>
-            </li>
-
-            <li class="dropdown-link">
-              <i class='icon-link-nav bx bx-trip'></i>
-              <h5><a href="#" class="link-nav">Domicilios</a></h5>
-            </li>
-          </ul>
+      <ul class="main-visual-nav">
+        <li class="flex-row gap-30">
+          <div class="nav-visual">
+            <input class="header__checkbox" type="checkbox" id="open-menu">
+            <label for="open-menu" class="header__open-nav-button" role="button">=</label>
         </div>
-
-        <li class="li-nav"><a href="">
-            <h2>Menu</h2>
-          </a></li>
-        <li class="li-nav"><a href="">
-            <h2>Domicilio</h2>
-          </a></li>
+          <div class="nav-visual">
+            <a href="#"><img class="logo-nav" for="open-menu"
+                src="../../assets/images/logos/Logo-AlexBurger-modified.png" alt="logo alex burger"></a>
+            </div>
+        </li>
+        <li class="flex-row gap-30">
+          <div class="nav-visual">
+            <a class="iniciarsesion" href="">Iniciar Sesion</a>
+          </div>
+          <div class="nav-visual">
+            <a class="iniciarsesion crear " href="">Crear Cuenta</a>
+          </div>
+        </li>
+        
       </ul>
     </nav>
+
     <div class="header-nav hidden">
       <ul class="header-ul">
+        <img src="../../assets/images/icons/equis.png" class='icon-close' alt="equis">
 
         <li class="container-header__ul">
           <div class="center container-link-ul">
-            <img src="../assets/icons/icons8-scooter-de-entrega-90.png" class=" icon-ul">
-            <a class=" title-links-ul ">Recoger en Alex Fit</a>
-            <a href="" class=" btn-ul">Pedir a Domicilio</a>
-          </div>
-          <div class="center container-link-ul">
-            <img src="../assets/icons/icons8-scooter-de-entrega-90.png" class=" icon-ul">
-            <a class=" title-links-ul ">DOMICILIOS</a>
-            <a href="" class=" btn-ul">Pedir a Domicilio</a>
-          </div>
-          <div class="center container-link-ul">
-            <img src="../assets/icons/icons8-restaurante-100.png" class=" icon-ul">
-            <a class=" title-links-ul ">Menu</a>
-            <a href="" class="btn-ul">Menu del Restaurante</a>
+
+            <a href="#" class="title-links-ul"><img src="../../assets/images/icons/scooter.png" class=" icon-ul"></a>
+            <a href="#" class="title-links-ul">Ordena ya!</a>
           </div>
 
           <div class="center container-link-ul">
-            <img src="../assets/icons/icons8-calendario-100.png" class=" icon-ul">
-            <a class=" title-links-ul ">RESERVAR MESA</a>
-            <a href="" class=" btn-ul">Reserva tu Mesa Aqui</a>
+            <a href="#" class="title-links-ul"><img src="../../assets/images/icons/Cubiertos.png" class="icon-ul"></a>
+            <a class=" title-links-ul ">Menu</a>
+          </div>
+
+          <div class="center container-link-ul">
+            <a href="#" class="title-links-ul"><img src="../../assets/images/icons/icons8-calendario-100.png"
+                class=" icon-ul"></a>
+            <a class=" title-links-ul ">Reserva Mesa</a>
           </div>
           <div class="center container-link-ul">
-            <img src="../assets/icons/icons8-calendario-100.png" class=" icon-ul">
-            <a class=" title-links-ul ">Ubicacion</a>
-            <a href="" class=" btn-ul">Reserva tu Mesa Aqui</a>
+            <a href="#" class="title-links-ul"><img src="../../assets/images/icons/map.png" alt="" class="icon-ul"></a>
+            <a href="#ubicacion" class="title-links-ul ">Ubicacion</a>
           </div>
-          <div class="center container-link-ul">
-            <img src="../assets/icons/icons8-calendario-100.png" class=" icon-ul">
-            <a class=" title-links-ul ">Ubicacion</a>
-            <a href="" class="btn-ul">Contactanos por wpp</a>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Help</span>
+              <i class='bx bx-chevron-down dropdown__arrow icon-ul'></i>
+            </div>
+            <div class="card_content">
+              <div class="item-list">
+                <div class="item">
+                  <i class='bx bx-question-mark'></i>
+                  <p>PQRs</p>
+                </div>
+                <div class="item">Preguntas Frecuentes</div>
+                <div class="item">Email Atencion al Cliente</div>
+              </div>
+            </div>
           </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Sobre Nosotros</span>
+              <i class='bx bx-chevron-down dropdown__arrow icon-ul'></i>
+            </div>
+            <div class="card_content">
+              <div class="item-list">
+                <div class="item">
+                  <i class='bx bx-message'></i>
+                  <p>Contacto</p>
+                </div>
+                <div class="item">
+
+                  <p>Terminos y Condiciones</p>
+                </div>
+                <div class="item">
+                  <p>Politicas de Cookies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </li>
       </ul>
     </div>
   </header>
 
 
-  <section class="Main-Container">
-    <div class="box-main">
-      <p class="alexfit cl-main">Alex Fit</p>
-      <h1 class="cl-main">las mejores hamburguesas en cartagena</h1>
-    </div>
-  </section>
+  <main class="image-overlay">
+    <img src="../../assets/images/web_main/MainIMG.jpg" alt="Background Image">
+    <h1>Alex Burger</h1>
+    <a class="ordena card" href="">Ordena Aqui!</a>
+    <div class="gradient"></div>
+  </main>
 
   <section class="about-us">
     <div class="auto-m center container-abouts">
@@ -124,31 +144,31 @@
     <h3>Menu</h3>
     <div class="products">
       <div class="product">
-        <img src="../assets/menu/presentacion/1.png" alt="">
+        <img src="../assets/images/menu/presentacion/1.png" alt="">
         <p>Hamburguesas</p>
       </div>
       <div class="product">
-        <img src="../assets/menu/presentacion/6.png" alt="">
+        <img src="../assets/images/menu/presentacion/6.png" alt="">
         <p>Perros</p>
       </div>
       <div class="product">
-        <img src="../assets/menu/presentacion/3.png" alt="">
+        <img src="../assets/images/menu/presentacion/3.png" alt="">
         <p>Desgranados</p>
       </div>
       <div class="product">
-        <img src="../assets/menu/presentacion/5.png" alt="">
+        <img src="../assets/images/menu/presentacion/5.png" alt="">
         <p>Salchichapapas</p>
       </div>
       <div class="product">
-        <img src="../assets/menu/presentacion/7.png" alt="">
+        <img src="../assets/images/menu/presentacion/7.png" alt="">
         <p>Adicionales</p>
       </div>
       <div class="product">
-        <img src="../assets/menu/presentacion/2.png" alt="">
+        <img src="../assets/images/menu/presentacion/2.png" alt="">
         <p>Arepas Rellenas</p>
       </div>
       <div class="product">
-        <img src="../assets/menu/presentacion/4.png" alt="">
+        <img src="../assets/images/menu/presentacion/4.png" alt="">
         <p>Bebidas</p>
       </div>
     </div>
@@ -161,7 +181,7 @@
       <button class="button">
         <p class="button__text">
           <span style="--index: 0;"> </span>
-          <span style="--index: 1;"> </span>   
+          <span style="--index: 1;"> </span>
           <span style="--index: 2;">W</span>
           <span style="--index: 3;">H</span>
           <span style="--index: 4;">A</span>
@@ -178,7 +198,7 @@
           <span style="--index: 15;">O</span>
           <span style="--index: 16;">N</span>
           <span style="--index: 17;"> </span>
-          <span  style="--index: 18.5;"><i class='bx bxl-whatsapp'></i></span>
+          <span style="--index: 18.5;"><i class='bx bxl-whatsapp'></i></span>
         </p>
 
         <div class="button__circle">
@@ -199,26 +219,23 @@
     </div>
   </a>
 
-
-
-
   <section class="Links">
 
 
     <div class="center container-link">
-      <img src="../assets/icons/icons8-scooter-de-entrega-90.png" class="icon-link">
+      <img src="../assets/images/icons/scooter.png" class="icon-link">
       <a class="title title-links ">DOMICILIOS</a>
       <p>Servicio de entrega a domicilio disponible para su comodidad.</p>
       <a href="" class="btn-links">Pedir a Domicilio</a>
     </div>
     <div class="center container-link">
-      <img src="../assets/icons/icons8-calendario-100.png" class="icon-link">
+      <img src="../assets/images/icons/Cubiertos.png" class="icon-link">
       <a class="title title-links ">CARTA</a>
       <p>Descubre nuestra variedad de platos y bebidas.</p>
       <a href="" class="btn-links">Menu del Restaurante</a>
     </div>
     <div class="center container-link">
-      <img src="../assets/icons/icons8-calendario-100.png" class="icon-link">
+      <img src="../assets/images/icons/icons8-calendario-100.png" class="icon-link">
       <a class="title title-links ">RESERVAR MESA</a>
       <p>Reserva tu mesa con antelación y asegura tu lugar.</p>
       <a href="" class="btn-links">Reserva tu Mesa Aqui</a>
@@ -227,7 +244,29 @@
   </section>
 
 
+  <section class="Ubicacion" id="ubicacion">
+    <h3>Ubicacion</h3>
+    <div class="container-info">
+      <div class="mapContainer">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.0659330312305!2d-75.53267729005098!3d10.416338289668454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f7e7ba5547d%3A0xccd5af418e8c2744!2sAlex%20Burger!5e0!3m2!1ses!2sco!4v1731940376793!5m2!1ses!2sco"
+          width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+      </div>
+      <div class="buttons">
+        <button class="btn-ubi full-rounded">
+          <a class="span" href="https://maps.app.goo.gl/SiVJHAkHZGNofrzJ7">google maps</a>
+          <div class="border full-rounded"></div>
+        </button>
+        <button class="btn-ubi full-rounded">
+          <a class="span" href="https://maps.app.goo.gl/SiVJHAkHZGNofrzJ7">Waze</a>
+          <div class="border full-rounded"></div>
+        </button>
+      </div>
 
+
+    </div>
+  </section>
 
   <section class="section__container blogs">
     <h2 class="blog-title-main">Blogs</h2>
@@ -270,16 +309,16 @@
       <div class="social-media">
         <a href="">Edificio Los Delfines, Cra. 2 #8-67 Apto 14-04, Cartagena de Indias, Provincia de Cartagena,
           Bolívar</a>
-        <img src="../assets/icons/icons8-marcador-96.png" alt="">
+        <img src="../assets/images/icons/icons8-marcador-96.png" alt="">
       </div>
       <div class="social-media">
         <a href="">+57 3052135329</a>
-        <img src="../assets/icons/icons8-teléfono-100.png" alt="">
+        <img src="../assets/images/icons/icons8-teléfono-100.png" alt="">
       </div>
 
       <div class="social-media">
         <a href="">alexfitinfo@gmail.com</a>
-        <img src="../assets/icons/icons8-mensaje-100.png" class="img-social">
+        <img src="../assets/images/icons/icons8-mensaje-100.png" class="img-social">
       </div>
     </div>
   </footer>

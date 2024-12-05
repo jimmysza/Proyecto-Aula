@@ -1,15 +1,37 @@
-
 const checkbox = document.querySelector(".header__checkbox");
 const checkboxClose = document.querySelector(".icon-close");
 const navBox = document.querySelector(".header-nav");
+const blur = document.querySelector(".blur");
 
+// Aseguramos que ambas clases se apliquen de manera coherente
 checkbox.addEventListener("click", () => {
-  navBox.classList.toggle("hidden");
+  if (blur.classList.contains("show")) {
+    // Si "show" ya está presente, ocultamos ambos
+    blur.classList.remove("show");
+    navBox.classList.add("hidden");
+  } else {
+    // Si "show" no está presente, mostramos ambos
+    blur.classList.add("show");
+    navBox.classList.remove("hidden");
+  }
 });
 
+// Cerrar el menú con el icono de cerrar
 checkboxClose.addEventListener("click", () => {
-  navBox.classList.toggle("hidden");
+  // Ambas clases se deben ocultar al cerrar
+  navBox.classList.add("hidden");
+  blur.classList.remove("show");
 });
+
+blur.addEventListener("click", () => {
+  // Ambas clases se deben ocultar al cerrar
+  navBox.classList.add("hidden");
+  blur.classList.remove("show");
+});
+
+
+
+
 
 
 /*Dropdown con click*/

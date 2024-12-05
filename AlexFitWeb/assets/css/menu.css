@@ -229,16 +229,6 @@ aside {
     background-color: chocolate;
 }
 
-
-.btn-categoria a:hover {
-    transform: scale(1.1);
-    border-radius: 15px;
-    background-color: #7a0a00;
-}
-
-
-
-
 /*Main Content*/
 
 .menu-content {
